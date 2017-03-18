@@ -219,6 +219,7 @@ function logArrayItemsSequentially(array, options = {}) {
 
   // сразу делаем вывод в консоль
   currentPortion.forEach((item) => console.log(item));
+  console.log('pause');
 
   // если остаток не пустой, передаём его в следующую итерацию,
   // выполнение которой откладываем с помощью setTimeout
@@ -276,6 +277,7 @@ function logArrayItemsSequentially(array, options = {}) {
  const tail = array.slice(itemsPerIteration);
 
  currentPortion.forEach((item) => console.log(item));
+ console.log('pause');
 
  if (tail.length) {
    setTimeout(() => logArrayItemsSequentially(tail, options), interval);
